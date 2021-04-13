@@ -1,22 +1,37 @@
 /*
   Blink
-  Turns on an LED on for one second, then off for one second, repeatedly.
+  Turns on LEDs one by one, than turns off LEDs one by one, with one second between each led.
 
   This example code is in the public domain.
  */
 
-int led = 13;
+int ledOne = 2;
+int ledTwo = 4;
+int ledThree = 6;
+int ledFour = 8;
 
-// the setup routine runs once when you press reset:
 void setup() {
-  // initialize the digital pin as an output.
-  pinMode(led, OUTPUT);
+  pinMode(ledOne, OUTPUT);
+  pinMode(ledTwo, OUTPUT);
+  pinMode(ledThree, OUTPUT);
+  pinMode(ledFour, OUTPUT);
 }
 
-// the loop routine runs over and over again forever:
 void loop() {
-  digitalWrite(led, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);               // wait for a second
-  digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
-  delay(1000);               // wait for a second
+  digitalWrite(ledOne, HIGH);
+  delay(1000);             
+  digitalWrite(ledTwo, HIGH);
+  delay(1000);
+  digitalWrite(ledThree, HIGH);
+  delay(1000);             
+  digitalWrite(ledFour, HIGH);
+  delay(1000);
+  digitalWrite(ledFour, LOW);
+  delay(1000);
+  digitalWrite(ledThree, LOW);
+  delay(1000);
+  digitalWrite(ledTwo, LOW);
+  delay(1000);
+  digitalWrite(ledOne, LOW);
+  delay(1000);
 }
